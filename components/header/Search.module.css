@@ -1,0 +1,47 @@
+.container {
+  background-color: var(--color-dark-primary);
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 1.5rem;
+  height: 3rem;
+
+  padding: 0 0.5rem;
+}
+
+.search:active,
+.search {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-light-primary);
+  background-color: var(--color-dark-primary);
+
+  width: 20rem;
+  padding-right: 0.5rem;
+
+  outline: none;
+  border: 0;
+
+  transition: all 0.35s cubic-bezier(0.56, 0.03, 0.41, 0.97);
+}
+
+.search:focus {
+  width: 22rem;
+}
+
+.icon {
+  font-size: 2.2rem;
+
+  background-color: var(--color-dark-primary);
+  color: var(--color-light-primary);
+
+  position: absolute;
+  left: 5px;
+  z-index: 1000;
+
+  cursor: pointer;
+}

@@ -1,0 +1,100 @@
+.container {
+  background-color: var(--color-dark-primary);
+  color: #fff;
+
+  border-radius: 0.2rem;
+  border: 2px solid var(--color-dark-primary);
+
+  padding: 1.5rem 2.5rem;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.form {
+  padding: 0 10rem;
+}
+
+.form ::placeholder {
+  color: var(--color-primary);
+  font-weight: 100;
+}
+
+.input_container {
+  margin: 1.5rem 0;
+}
+
+.input_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.input:focus,
+.input {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+
+  outline: none;
+  border: 0;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-light-100);
+  color: var(--color-dark-primary);
+}
+
+.form textarea {
+  resize: none;
+  height: 6rem;
+}
+
+.submit {
+  font-size: 1.7rem;
+  font-weight: 900;
+
+  color: var(--color-dark-200);
+  background-color: var(--color-secondary);
+
+  border: 0;
+  border-radius: 100rem;
+  border-radius: 0.3rem;
+
+  padding: 0.3rem 1.4rem;
+  margin-right: auto;
+  width: 14rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.submit:hover {
+  box-shadow: 0 0 0.5rem 0.4rem var(--color-primary);
+}
+
+.submit svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.submit:hover svg {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0.1rem);
+}

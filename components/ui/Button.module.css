@@ -1,0 +1,59 @@
+.button {
+  border: 0 !important;
+  font-weight: 600 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  cursor: pointer !important;
+}
+
+.primary {
+  background-color: var(--color-light-primary);
+  color: var(--color-dark-300);
+}
+
+.secondary {
+  background-color: var(--color-dark-300);
+  color: var(--color-light-100);
+}
+
+.lg {
+  padding: 0.2rem 2.5rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.md {
+  padding: 0.1rem 1.5rem;
+  font-size: 1.8rem;
+}
+
+.r-0 {
+  border-radius: 0;
+}
+
+.r-1 {
+  border-radius: 0.3rem;
+}
+
+.r-2 {
+  border-radius: 0.5rem;
+}
+
+.r-3 {
+  border-radius: 0.7rem;
+}
+
+.r-4 {
+  border-radius: 1rem;
+}
+
+.r-5 {
+  border-radius: 1.2rem;
+}
+
+.r-full {
+  border-radius: 1000rem;
+}

@@ -1,0 +1,73 @@
+.container {
+  position: absolute;
+  top: 4rem;
+  left: 1.2rem;
+  z-index: 1000;
+
+  background-color: var(--color-light-100);
+  color: var(--color-dark-primary);
+
+  width: 35rem;
+  padding: 1.5rem 1rem;
+
+  border-radius: 0.7rem;
+  box-shadow: 0 0 0.7rem var(--color-dark-200);
+}
+
+.products_container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 35rem;
+}
+
+.line {
+  border-top: 1px solid var(--color-dark-primary);
+  margin: 2rem 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer > div {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer span {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.footer h6 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn_submit {
+  background-color: var(--color-light-200);
+  color: var(--color-dark-300);
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: fit-content;
+  align-self: flex-end;
+
+  padding: 0.2rem 1rem;
+  border: 1px solid var(--color-dark-primary);
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.btn_submit > :first-child {
+  transition: all 0.2s;
+}
+.btn_submit:hover > :first-child {
+  transform: rotateZ(10deg);
+}

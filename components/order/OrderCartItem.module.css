@@ -1,0 +1,39 @@
+.container {
+  background-color: var(--color-light-100);
+  box-shadow: 0 0 0.5rem 0.2rem var(--color-dark-300);
+
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+
+  border-radius: 0.3rem;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.image_container {
+  position: relative;
+
+  width: 7rem;
+  height: 7rem;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.counter {
+  scale: 0.7;
+}
+
+.remove_icon {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  color: red;
+
+  cursor: pointer;
+}

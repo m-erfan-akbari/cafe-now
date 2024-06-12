@@ -1,0 +1,49 @@
+.container {
+  background-color: var(--color-dark-primary);
+  padding: 1.5rem 2.5rem;
+
+  border-radius: 0.2rem;
+  border: 2px solid var(--color-dark-primary);
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #fff;
+}
+
+.cart_icon {
+  font-size: 2.5rem;
+}
+
+.products_container {
+  height: 50vh;
+  padding: 0 1rem;
+
+  overflow-y: scroll;
+}
+
+.total_container {
+  color: #eee;
+
+  padding: 2rem 1.5rem;
+  margin: 1.5rem 0;
+
+  border-radius: 0.3rem;
+}
+
+.total_container > h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.total_container hr {
+  border-color: #ffffff52;
+  margin: 1rem;
+}
