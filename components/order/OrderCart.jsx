@@ -8,6 +8,7 @@ import Image from "next/image";
 import Button from "../ui/Button";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Link from "next/link";
+import sadCoffee from "@/public/images/sad-coffee.png";
 
 export default function OrderCart() {
   const cart = useCartSelector();
@@ -23,11 +24,7 @@ export default function OrderCart() {
       {isCartEmpty ? (
         <div className={styles.empty_container}>
           <div className={styles.image_container}>
-            <Image
-              src={"/images/sad-coffee.png"}
-              alt='empty cart picture'
-              fill
-            />
+            <Image src={sadCoffee} alt='empty cart picture' fill property />
           </div>
 
           <h3>سبد خرید خالی می‌باشد!</h3>
