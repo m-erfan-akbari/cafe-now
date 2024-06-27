@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import SpinnerItem from "./SpinnerItem";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/lib/redux/features/cart/cartSlice";
+import Loading from "../ui/Loading";
 
 export default function Spinner() {
   const [data, setData] = useState({
@@ -62,7 +63,7 @@ export default function Spinner() {
   }, [rotate, data]);
 
   if (data.isLoading) {
-    return <h4>در حال بارگیری...</h4>;
+    return <Loading />;
   }
 
   if (data.error) {
