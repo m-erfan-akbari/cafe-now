@@ -88,6 +88,7 @@ export default function Spinner() {
               src={currentCoffee?.image}
               alt={`تصویر ${currentCoffee?.title}`}
               fill
+              priority
             />
           )}
         </div>
