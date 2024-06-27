@@ -1,5 +1,6 @@
 .container {
   background-color: var(--color-light-100);
+  color: var(--color-dark-primary);
   box-shadow: 0 0 0.5rem 0.2rem var(--color-dark-300);
 
   padding: 1rem 1.5rem;
@@ -24,37 +25,6 @@
   font-weight: 700;
 }
 
-.counter {
-  scale: 0.7;
-}
-
-.remove_icon {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-
-  color: red;
-
-  cursor: pointer;
-}
-
-@media (min-width: 2000px) {
-  .image_container {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .container {
-    font-size: 2rem;
-  }
-
-  .counter {
-    scale: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    font-size: 2rem;
-  }
+.container > p {
+  text-align: center;
 }

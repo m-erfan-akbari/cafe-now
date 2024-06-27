@@ -1,26 +1,30 @@
 "use client";
-import { useCartSelector } from "@/lib/redux/features/cart/cartSlice";
 import styles from "./OrderInfo.module.css";
 import { FaUserEdit, FaPhoneAlt, FaLongArrowAltRight } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineCoffeeMaker } from "react-icons/md";
 import Link from "next/link";
 import Button from "../ui/Button";
-import { useState } from "react";
 import toast from "react-hot-toast";
+import { useState } from "react";
 import { createOrder } from "@/lib/productActions";
-import { redirect } from "next/dist/server/api-utils";
+import {
+  useCartSelector,
+  clearCart,
+} from "@/lib/redux/features/cart/cartSlice";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 
 export default function OrderInfo() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [address, setAddress] = useState("");
 
+  const dispatch = useDispatch();
+  const cart = useCartSelector();
   const router = useRouter();
 
-  const cart = useCartSelector();
-  const isCartEmpty = cart.products.length < 1;
+  const isCartEmpty = cart.products.length === 0;
 
   async function handleCreateOrder() {
     if (!name) return toast.error("نام را وارد نمائید!");
@@ -43,15 +47,18 @@ export default function OrderInfo() {
     if (data?.status === "success") {
       toast.success(`${data.message}`);
       router.push(`/order/${data.data.id}`);
+      dispatch(clearCart());
     } else {
       toast.error(`${data.message}`);
     }
   }
 
+  if (isCartEmpty) return <></>;
+
   return (
     <div className={styles.container}>
       <div className={styles.title_container}>
-        <h2>فرم اطلاعات</h2>
+        <h2>اطلاعات تحویل گیرنده</h2>
         <FaUserEdit className={styles.icon} />
       </div>
 
@@ -107,25 +114,16 @@ export default function OrderInfo() {
           />
         </div>
 
-        {isCartEmpty ? (
-          <Link href={"/menu"} className={styles.menu}>
-            <Button size='md'>
-              <FaLongArrowAltRight />
-              &nbsp;&nbsp;بازگشت به منو
-            </Button>
-          </Link>
-        ) : (
-          <button
-            className={`${styles.submit} ${
-              isCartEmpty ? styles.btn_disable : ""
-            } `}
-            onClick={handleCreateOrder}
-            disabled={isCartEmpty}
-          >
-            <span>ثبت سفارش</span>
-            <MdOutlineCoffeeMaker />
-          </button>
-        )}
+        <button
+          className={`${styles.submit} ${
+            isCartEmpty ? styles.btn_disable : ""
+          } `}
+          onClick={handleCreateOrder}
+          disabled={isCartEmpty}
+        >
+          <span>ثبت سفارش</span>
+          <MdOutlineCoffeeMaker />
+        </button>
       </form>
     </div>
   );

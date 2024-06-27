@@ -1,12 +1,12 @@
 .button {
-  border: 0 !important;
-  font-weight: 600 !important;
+  border: 0;
+  font-weight: 600;
 
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .primary {
@@ -56,4 +56,16 @@
 
 .r-full {
   border-radius: 1000rem;
+}
+
+@media (min-width: 2000px) {
+  .lg {
+    padding: 0.3rem 3.5rem;
+    font-size: 5rem;
+  }
+
+  .md {
+    padding: 0.5rem 3rem;
+    font-size: 4rem;
+  }
 }

@@ -17,3 +17,9 @@
   background-color: var(--color-light-100);
   color: var(--color-dark-primary);
 }
+
+@media (max-width: 480px) {
+  .item {
+    font-size: 1.6rem;
+  }
+}

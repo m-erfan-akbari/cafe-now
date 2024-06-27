@@ -1,11 +1,14 @@
-.main {
+.bg_container {
   margin: 3rem;
+
   border-radius: 1rem;
   position: relative;
+  min-height: 80vh;
   height: 50rem;
 
   overflow: hidden;
 }
+
 .home {
   color: var(--color-light-0);
 
@@ -71,6 +74,22 @@
   box-shadow: 0 0 1rem var(--color-dark-primary);
 }
 
+.up_arrow {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  color: var(--color-light-0);
+  transform: translateX(-50%);
+}
+
+.down_arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  color: var(--color-light-0);
+  transform: translateX(-50%);
+}
+
 @keyframes rise {
   0% {
     opacity: 0;
@@ -100,5 +119,39 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+.planning_content,
+.latte_content,
+.yard_content {
+  color: var(--color-light-100);
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 2000px) {
+  .title {
+    font-size: 7rem;
+  }
+
+  .description {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg_container {
+    min-height: 40vh;
+  }
+
+  .yard_content,
+  .latte_content,
+  .planning_content {
+    width: 100%;
+    top: 20%;
   }
 }

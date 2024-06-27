@@ -15,7 +15,7 @@
 }
 
 .icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .form {
@@ -97,4 +97,34 @@
 .submit:hover svg {
   transition: all 0.3s ease-in-out;
   transform: translateY(0.1rem);
+}
+
+@media (min-width: 2000px) {
+  .input_title {
+    font-size: 2.2rem;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+  }
+
+  .input:focus,
+  .input {
+    font-size: 2.4rem;
+  }
+
+  .form textarea {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .input:focus,
+  .input {
+    font-size: 2rem;
+  }
+
+  .form textarea {
+    height: 10rem;
+  }
 }

@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Products from "@/components/product/Products";
 import { getProducts } from "@/lib/productActions";
 

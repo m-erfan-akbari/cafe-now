@@ -1,0 +1,22 @@
+.spinner_item {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform-origin: bottom left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(40% 0, 100% 0, 100% 60%, 0 100%);
+
+  transition: all 4s ease-in-out;
+}
+
+.image_container {
+  position: relative;
+  width: 40%;
+  height: 40%;
+
+  transition: all 4s ease-in-out;
+}

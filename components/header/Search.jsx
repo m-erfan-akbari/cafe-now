@@ -20,6 +20,7 @@ export default function Search() {
         onChange={(e) => setValue(e.target.value)}
         className={styles.search}
         placeholder='پیگیری سفارش'
+        id='order-search'
       />
 
       <FaMagnifyingGlass className={styles.icon} onClick={handleSearch} />

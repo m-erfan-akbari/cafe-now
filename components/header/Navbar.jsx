@@ -4,14 +4,17 @@ import styles from "./Navbar.module.css";
 import NavbarListItem from "./NavbarListItem";
 import { useCartSelector } from "@/lib/redux/features/cart/cartSlice";
 import { IoCartOutline } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartModal from "../cart/CartModal";
+import { useDispatch } from "react-redux";
 
 export default function Navbar() {
   const [isOpenCart, setIsOpenCart] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const cart = useCartSelector();
+
+  const totalCount = cart.products.reduce((acc, cur) => acc + cur.count, 0);
 
   return (
     <nav className={styles.nav_container}>
@@ -22,8 +25,14 @@ export default function Navbar() {
         <NavbarListItem href={"/menu"} active={pathname === "/menu"}>
           منو
         </NavbarListItem>
-        <NavbarListItem href={"/about-us"} active={pathname === "/about-us"}>
-          درباره‌ما
+        <NavbarListItem href={"/random"} active={pathname === "/random"}>
+          گردونه
+        </NavbarListItem>
+        <NavbarListItem
+          href={"#order-search"}
+          active={pathname === "#order-search"}
+        >
+          پیگیری سفارش
         </NavbarListItem>
       </ul>
 
@@ -34,14 +43,14 @@ export default function Navbar() {
           onMouseLeave={() => setIsOpenCart(false)}
           onClick={() => router.push("/order")}
         />
-        {cart.products.length > 0 && (
+        {totalCount > 0 && (
           <div
             className={styles.counter}
             onMouseEnter={() => setIsOpenCart(true)}
             onMouseLeave={() => setIsOpenCart(false)}
             onClick={() => router.push("/order")}
           >
-            {cart.products?.length}
+            {totalCount}
           </div>
         )}
       </div>

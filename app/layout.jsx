@@ -1,4 +1,3 @@
-import Providers from "@/lib/redux/store";
 import "./globals.css";
 import Navbar from "@/components/header/Navbar";
 import { ReduxProvider } from "@/lib/redux/Provider";

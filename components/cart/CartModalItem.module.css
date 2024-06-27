@@ -4,6 +4,8 @@
   grid-template-rows: max-content 1fr;
 
   margin: 1rem 0;
+
+  position: relative;
 }
 
 .image_container {
@@ -50,4 +52,14 @@
   align-self: flex-end;
 
   scale: 0.8;
+}
+
+.remove_icon {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  color: red;
+
+  cursor: pointer;
 }

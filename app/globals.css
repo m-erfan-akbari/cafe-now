@@ -19,6 +19,7 @@
   --color-dark-100: #140c00;
   --color-dark-200: #221400;
   --color-dark-300: #331e00;
+  --color-dark-350: #331e00c5;
   --color-dark-400: #553200;
   --color-dark-500: #81500c;
 
@@ -34,6 +35,8 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -85,4 +88,40 @@ input {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-dark-200);
+}
+
+/* BREAKPOINTS */
+/* more than 1200px */
+@media (min-width: 2000px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+  html {
+    font-size: 54%;
+  }
+}
+
+/* 979px */
+@media (max-width: 979px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  html {
+    font-size: 30%;
+  }
 }

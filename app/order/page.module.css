@@ -9,3 +9,14 @@
 .container > * {
   width: 45%;
 }
+
+@media (max-width: 979px) {
+  .container {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .container > * {
+    width: 70%;
+  }
+}
