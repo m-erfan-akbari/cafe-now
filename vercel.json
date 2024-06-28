@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/order/page.jsx": {
+      "includeFiles": "./data/db.json"
+    }
+  }
+}
